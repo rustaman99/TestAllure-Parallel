@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 136.329 s <<< FAILURE! - in TestSuite
+accountLoginf(epicenter.EpicenterTest)  Time elapsed: 30.087 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span data-v-73cdadac="" class="header__login-opener-text">...</span> is not clickable at point (1306, 26). Other element would receive the click: <div class="fancybox-slide fancybox-slide--html fancybox-slide--current fancybox-slide--complete" style="">...</div>
+  (Session info: chrome=108.0.5359.124)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6a5a072d97b7e2786f1ab5a7c81fb789, clickElement {id=01ba3676-e328-45bf-9f88-18b553812868}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.124, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: /var/folders/33/wl_p8n2s3wx...}, goog:chromeOptions: {debuggerAddress: localhost:58897}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58897/devtoo..., se:cdpVersion: 108.0.5359.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (6a5a072d97b7e2786f1ab5a7c81fb789)] -> xpath: //span[@class='header__login-opener-text'] ]
+Session ID: 6a5a072d97b7e2786f1ab5a7c81fb789
+	at epicenter.EpicenterTest.accountLoginf(EpicenterTest.java:37)
+
+accountLoginfr(epicenter.EpicenterTest)  Time elapsed: 49.094 s  <<< FAILURE!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <span data-v-73cdadac="" class="header__login-opener-text">...</span> is not clickable at point (1306, 26). Other element would receive the click: <div class="fancybox-slide fancybox-slide--html fancybox-slide--current fancybox-slide--complete" style="">...</div>
+  (Session info: chrome=108.0.5359.124)
+Build info: version: '4.7.2', revision: '4d4020c3b7'
+System info: os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [6d3966479977a313f1a4aa2624bf0610, clickElement {id=f2177d85-a55e-45dc-ab35-99acd1621e28}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.124, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: /var/folders/33/wl_p8n2s3wx...}, goog:chromeOptions: {debuggerAddress: localhost:58981}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:58981/devtoo..., se:cdpVersion: 108.0.5359.124, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (6d3966479977a313f1a4aa2624bf0610)] -> xpath: //span[@class='header__login-opener-text'] ]
+Session ID: 6d3966479977a313f1a4aa2624bf0610
+	at epicenter.EpicenterTest.accountLoginfr(EpicenterTest.java:53)
+

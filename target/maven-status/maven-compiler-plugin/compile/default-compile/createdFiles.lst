@@ -1,0 +1,6 @@
+epicenterPage/HomePage.class
+epicenterPage/BasePage.class
+epicenterPage/ChromeStartPage.class
+epicenterPage/MacbookAirPage.class
+epicenterPage/MobilPhonePage.class
+utils/WaitingUtils.class
