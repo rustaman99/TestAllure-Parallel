@@ -45,12 +45,12 @@
         <type>pom</type>
         <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.10.1</version>
+        <version>3.1</version>
     </dependency>
-
     <dependency>
         <groupId>io.qameta.allure</groupId>
         <artifactId>allure-junit5</artifactId>
@@ -89,7 +89,8 @@
             <reportVersion>2.10.0</reportVersion>
         </configuration>
     </plugin>
-</plugins>
-</build>
+
+        </plugins>
+    </build>
 
 </project>
