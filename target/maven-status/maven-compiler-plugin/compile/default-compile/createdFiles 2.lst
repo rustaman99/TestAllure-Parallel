@@ -1,0 +1,8 @@
+epicenterPage/HomePage.class
+utils/AllureListener.class
+epicenterPage/BasePage.class
+epicenterPage/ChromeStartPage.class
+utils/DriverManager.class
+epicenterPage/MacbookAirPage.class
+epicenterPage/MobilPhonePage.class
+utils/WaitingUtils.class
