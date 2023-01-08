@@ -19,32 +19,20 @@ import static utils.DriverManager.getDriver;
 
 public class  BaseEpicenterTest {
     protected static final Logger log = Logger.getLogger(EpicenterTest.class);
-    HomePage homePage;
-    WaitingUtils waitingUtils;
-    ChromeStartPage chromeStartPage;
-    MobilPhonePage mobilPhonePage;
-    MacbookAirPage macbookAirPage;
+    ThreadLocal<Pages> pages = new ThreadLocal<>();
 
 
     @BeforeMethod
     public void before() {
         createBrowserInstance("chrome");
+        pages.set(new Pages());
         getDriver().get("https://www.google.com.ua/");
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
         getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5000));
-        initPages();
-
-
     }
 
-    public void initPages() {
-        homePage = new HomePage( getDriver());
-        waitingUtils = new WaitingUtils( getDriver());
-        chromeStartPage = new ChromeStartPage( getDriver());
-        mobilPhonePage = new MobilPhonePage( getDriver());
-        macbookAirPage = new MacbookAirPage( getDriver());
-    }
+
 
 
     @AfterMethod(description = "Browser is closed", alwaysRun = true)
