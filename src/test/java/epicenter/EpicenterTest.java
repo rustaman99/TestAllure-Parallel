@@ -23,7 +23,7 @@ public class EpicenterTest extends BaseEpicenterTest {
         homePage.loginToPersonalAccount.click();
 
         homePage.userLogin.sendKeys("+380506672722");
-        homePage.userPass.sendKeys("Rustaman99");
+        homePage.userPass.sendKeys("Rustaman99!");
         Allure.step("click loginButton");
         homePage.loginButton.click();
         waitingUtils.wait5Seconds(homePage.nameUser).click();
