@@ -9,14 +9,16 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.AllureListener;
+import utils.DriverManager;
 import utils.WaitingUtils;
 import java.time.Duration;
+
+import static utils.DriverManager.createBrowserInstance;
+import static utils.DriverManager.getDriver;
 
 
 public class  BaseEpicenterTest {
     protected static final Logger log = Logger.getLogger(EpicenterTest.class);
-
-    protected static WebDriver driver;
     HomePage homePage;
     WaitingUtils waitingUtils;
     ChromeStartPage chromeStartPage;
@@ -26,22 +28,22 @@ public class  BaseEpicenterTest {
 
     @BeforeMethod
     public void before() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5000));
+        createBrowserInstance("chrome");
+        getDriver().get("https://www.google.com.ua/");
+        getDriver().manage().window().maximize();
+        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
+        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5000));
         initPages();
 
 
     }
 
     public void initPages() {
-        homePage = new HomePage(driver);
-        waitingUtils = new WaitingUtils(driver);
-        chromeStartPage = new ChromeStartPage(driver);
-        mobilPhonePage = new MobilPhonePage(driver);
-        macbookAirPage = new MacbookAirPage(driver);
+        homePage = new HomePage( getDriver());
+        waitingUtils = new WaitingUtils( getDriver());
+        chromeStartPage = new ChromeStartPage( getDriver());
+        mobilPhonePage = new MobilPhonePage( getDriver());
+        macbookAirPage = new MacbookAirPage( getDriver());
     }
 
 
@@ -49,10 +51,10 @@ public class  BaseEpicenterTest {
     public void quitBrowser(ITestResult result) {
 
         if (ITestResult.FAILURE == result.getStatus()) {
-            AllureListener.saveScreenshotPNG(driver);
+            AllureListener.saveScreenshotPNG(getDriver());
 
         }
-        driver.quit();
+        getDriver().quit();
     }
 }
 

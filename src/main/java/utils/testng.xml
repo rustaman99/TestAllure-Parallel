@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All test Suite">
+
+    <test  name="Parallel test " parallel="methods" thread-count="2">
+        <classes>
+            <class name="epicenter.EpicenterTest">
+                <methods>
+                    <include name="accountLogin"/>
+                    <include name="accountLoginf"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

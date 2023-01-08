@@ -1,5 +1,4 @@
 package utils;
-
 import epicenterPage.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

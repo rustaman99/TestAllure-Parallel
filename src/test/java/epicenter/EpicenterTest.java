@@ -9,14 +9,13 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.AllureListener;
 
+import static utils.DriverManager.getDriver;
+
 public class EpicenterTest extends BaseEpicenterTest {
  @Owner("Ruslan ")
  @Description("Проверка входа в личный кабинет")
-
     @Test(description = "Проверка входа в личный кабинет")
     public void accountLogin() throws InterruptedException {
-
-        driver.get("https://www.google.com.ua/");
         chromeStartPage.searchBox.sendKeys("Epicenter");
         Allure.step("click searchBox button");
         chromeStartPage.searchBox.sendKeys(Keys.ENTER);
@@ -35,7 +34,6 @@ public class EpicenterTest extends BaseEpicenterTest {
        }
     @Test(description = "Проверка входа в личный кабинет")
     public void accountLoginf() throws InterruptedException {
-        driver.get("https://www.google.com.ua/");
         chromeStartPage.searchBox.sendKeys("Epicenter");
         chromeStartPage.searchBox.sendKeys(Keys.ENTER);
         chromeStartPage.socketSelectionInResults.click();
@@ -44,7 +42,7 @@ public class EpicenterTest extends BaseEpicenterTest {
         homePage.userPass.sendKeys("Rustaman99!");
         homePage.loginButton.click();
         waitingUtils.wait5Seconds(homePage.nameUser).click();
-        Assert.assertEquals(homePage.inscriptionMyOffice.getText(), " кабінет");
+        Assert.assertEquals(homePage.inscriptionMyOffice.getText(), "Мій кабінет");
         AllureListener.saveTextLog("Error");
 
     }
