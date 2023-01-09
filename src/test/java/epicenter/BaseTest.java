@@ -1,25 +1,20 @@
 package epicenter;
 
-import epicenterPage.*;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.log4j.*;
-import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.AllureListener;
-import utils.DriverManager;
-import utils.WaitingUtils;
+
 import java.time.Duration;
 
 import static utils.DriverManager.createBrowserInstance;
 import static utils.DriverManager.getDriver;
 
 
-public class  BaseEpicenterTest {
+public  class BaseTest {
     protected static final Logger log = Logger.getLogger(EpicenterTest.class);
-    ThreadLocal<Pages> pages = new ThreadLocal<>();
+    protected ThreadLocal<Pages> pages = new ThreadLocal<>();
 
 
     @BeforeMethod

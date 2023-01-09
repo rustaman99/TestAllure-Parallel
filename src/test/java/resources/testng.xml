@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All test Suite">
-
-    <test  name="Parallel test " parallel="methods" thread-count="2">
+<suite name="Test">
+    <test  name="Test " parallel="methods" thread-count="4">
         <classes>
-            <class name="epicenter.EpicenterTest">
+            <class name="trello.TrelloTest">
                 <methods>
-                    <include name="accountLogin"/>
-                    <include name="accountLoginf"/>
+                    <include name="logginTrello"/>
+                    <include name="сheckingIfTheCreateButtonIsDisplayed"/>
+                    <include name="checkSearchFieldIsEnabled"/>
+                    <include name="checkBoardName"/>
+                    <include name="logginTrello1"/>
+                    <include name="сheckingIfTheCreateButtonIsDisplayed1"/>
+                    <include name="checkSearchFieldIsEnabled1"/>
+                    <include name="checkBoardName1"/>
+                    <include name="logginTrello2"/>
+                    <include name="сheckingIfTheCreateButtonIsDisplayed2"/>
+                    <include name="checkSearchFieldIsEnabled2"/>
+                    <include name="checkBoardName2"/>
                 </methods>
             </class>
         </classes>
