@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Epicenter Test">
+
+    <test  name="Parallel test " parallel="methods" thread-count="2">
+        <classes>
+            <class name="epicenter.EpicenterTest">
+                <methods>
+                    <include name="accountLogin"/>
+                    <include name="accountLoginf"/>
+                    <include name="accountLogin1"/>
+                    <include name="accountLogin2"/>
+                    <include name="accountLogin3"/>
+                    <include name="accountLogin4"/>
+                    <include name="accountLogin5"/>
+                    <include name="accountLogin6"/>
+                    <include name="accountLogin7"/>
+                    <include name="accountLogin8"/>
+                    <include name="accountLogin9"/>
+                    <include name="accountLogin10"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
