@@ -91,7 +91,10 @@
                             <name>allure.results.directory</name>
                             <value>${project.build.directory}/allure-results</value>
                         </property>
-
+                        <suiteXmlFiles>
+                            <suiteXmlFile>epicenterSuite.xml</suiteXmlFile>
+                            <suiteXmlFile>trelloSuite.xml</suiteXmlFile>
+                        </suiteXmlFiles>
                     </systemProperties>
                 </configuration>
                 <dependencies>
