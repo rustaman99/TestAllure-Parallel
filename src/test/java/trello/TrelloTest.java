@@ -165,6 +165,5 @@ public class TrelloTest  extends BaseTest {
         pages.get().startPageTrello.JavaButton.click();
         Assert.assertEquals(    pages.get().workspacePage.boardName.getText(),"Java");
     }
-
 }
 
