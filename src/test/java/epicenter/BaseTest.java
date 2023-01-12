@@ -6,6 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import utils.AllureListener;
 
+import java.net.MalformedURLException;
 import java.time.Duration;
 
 import static utils.DriverManager.createBrowserInstance;
@@ -18,8 +19,8 @@ public  class BaseTest {
 
 
     @BeforeMethod
-    public void before() {
-        createBrowserInstance("chrome");
+    public void before() throws MalformedURLException {
+       createBrowserInstance("chrome");
         pages.set(new Pages());
         getDriver().get("https://www.google.com.ua/");
         getDriver().manage().window().maximize();

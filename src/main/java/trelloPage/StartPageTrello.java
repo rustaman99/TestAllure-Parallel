@@ -11,7 +11,7 @@ public class StartPageTrello extends BasePageTrello{
     @FindBy(xpath = "//p[@class='uJFM1WfH-EGEiT']")
     public
     WebElement buttonCreated;
-    @FindBy(xpath = "//input[@placeholder='Поиск']")
+    @FindBy(xpath = "//input[@placeholder='Пошук']")
     public
     WebElement searchField;
     @FindBy(xpath = "//*[@class='boards-page-board-section-list']//div[@title='Java']")

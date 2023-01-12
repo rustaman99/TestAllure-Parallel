@@ -9,7 +9,7 @@ public class ChromePage  extends BasePageTrello{
     public
     WebElement searchBoxCH;
 
-    @FindBy(xpath = "//h3[text()='Управление проектами команды с любого устройства - Trello']")
+    @FindBy(xpath = "//h3[text()='Керуйте проєктами своєї команди звідусіль | Trello']")
     public
     WebElement socketSelectionInResult;
 
