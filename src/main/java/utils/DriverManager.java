@@ -15,7 +15,7 @@ public class DriverManager {
     public static void createBrowserInstance(String browser) throws MalformedURLException {
         if(reader.getProperty("Remote").equals("true")) {
             ChromeOptions chromeOptions = new ChromeOptions();
-            chromeOptions.setCapability("browserVersion", "100");
+            // chromeOptions.setCapability("browserVersion", "108");
             chromeOptions.setCapability("platformName", "Windows");
         setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions));
         } else if (browser.equalsIgnoreCase("Chrome")) {
