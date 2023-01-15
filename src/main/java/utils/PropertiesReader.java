@@ -13,7 +13,7 @@ public class PropertiesReader {
 
     static {
         try {
-            prop = readPropertiesFile("src\\main\\resources\\application.properties");
+            prop = readPropertiesFile("src/main/resources/application.properties");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
