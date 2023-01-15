@@ -37,7 +37,7 @@ public  class BaseTest {
             AllureListener.saveScreenshotPNG(getDriver());
 
         }
-        // getDriver().quit();
+         getDriver().quit();
     }
 }
 
