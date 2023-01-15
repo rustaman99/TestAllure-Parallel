@@ -12,18 +12,18 @@ import static utils.DriverManager.getDriver;
 public class TrelloTest  extends BaseTest {
   @BeforeMethod
   public void login() throws InterruptedException {
-      getDriver().get("https://trello.com");
-      pages.get().loginPage.buttonLogin.click();
-      pages.get().loginPage.userEmailForm.sendKeys("rsauto2019@gmail.com");
-      pages.get().loginPage.userEmailForm.sendKeys(Keys.ENTER);
-      pages.get().waitingUtils.waitElementToBeClickable(pages.get().loginPage.userPasswordForm).sendKeys("rustaman99");
-      pages.get().loginPage.userPasswordForm.sendKeys(Keys.ENTER);
 //      getDriver().get("https://trello.com");
 //      pages.get().loginPage.buttonLogin.click();
-//      pages.get().loginPage.userEmailForm.sendKeys("nazarenko.ruslan@ukr.net");
+//      pages.get().loginPage.userEmailForm.sendKeys("rsauto2019@gmail.com");
 //      pages.get().loginPage.userEmailForm.sendKeys(Keys.ENTER);
 //      pages.get().waitingUtils.waitElementToBeClickable(pages.get().loginPage.userPasswordForm).sendKeys("rustaman99");
 //      pages.get().loginPage.userPasswordForm.sendKeys(Keys.ENTER);
+      getDriver().get("https://trello.com");
+      pages.get().loginPage.buttonLogin.click();
+      pages.get().loginPage.userEmailForm.sendKeys("nazarenko.ruslan@ukr.net");
+      pages.get().loginPage.userEmailForm.sendKeys(Keys.ENTER);
+      pages.get().waitingUtils.waitElementToBeClickable(pages.get().loginPage.userPasswordForm).sendKeys("rustaman99");
+      pages.get().loginPage.userPasswordForm.sendKeys(Keys.ENTER);
   }
     @Test
     public void checkUserName() {

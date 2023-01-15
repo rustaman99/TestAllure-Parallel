@@ -6,10 +6,10 @@
         <classes>
             <class name="sites.trello.TrelloTest">
                 <methods>
-                    <include name="logginTrello"/>
-                    <include name="сheckingIfTheCreateButtonIsDisplayed"/>
-                    <include name="checkSearchFieldIsEnabled"/>
-                    <include name="checkBoardName"/>
+                    <include name="checkForAddInMemberInTheCard"/>
+                    <include name="checkCardWithIndex2IsDisplayed"/>
+                    <include name="dragСardToAnotherBoard"/>
+                    <include name="addALabelInTheBoardAndCheckIfItIsDisplayed"/>
 
                 </methods>
             </class>
