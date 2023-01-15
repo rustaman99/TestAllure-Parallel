@@ -4,7 +4,7 @@
     <parameter name="browser" value="chrome"/>
     <test  name="Parallel test " parallel="methods" thread-count="2">
         <classes>
-            <class name="epicenter.EpicenterTest">
+            <class name="sites.epicenter.EpicenterTest">
                 <methods>
                     <include name="accountLogin"/>
                     <include name="accountLoginf"/>

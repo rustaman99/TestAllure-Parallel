@@ -1,9 +1,9 @@
-package epicenter;
-
+package sites;
 import org.apache.log4j.*;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import sites.epicenter.EpicenterTest;
 import utils.AllureListener;
 
 import java.net.MalformedURLException;
@@ -22,7 +22,6 @@ public  class BaseTest {
     public void before() throws MalformedURLException {
        createBrowserInstance("chrome");
         pages.set(new Pages());
-        getDriver().get("https://www.google.com.ua/");
         getDriver().manage().window().maximize();
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5000));
         getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5000));
@@ -38,7 +37,7 @@ public  class BaseTest {
             AllureListener.saveScreenshotPNG(getDriver());
 
         }
-        getDriver().quit();
+        // getDriver().quit();
     }
 }
 

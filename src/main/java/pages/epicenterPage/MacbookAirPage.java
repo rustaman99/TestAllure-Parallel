@@ -1,10 +1,11 @@
-package epicenterPage;
+package pages.epicenterPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.BasePage;
 
-public class MacbookAirPage extends BasePage{
+public class MacbookAirPage extends BasePage {
     @FindBy(xpath = "//button[@data-card-params='6880159, 1,1']")
     public WebElement buyButtonMac6880159;
 

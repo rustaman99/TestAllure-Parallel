@@ -1,6 +1,6 @@
 package utils;
 
-import epicenterPage.BasePage;
+import pages.BasePage;
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

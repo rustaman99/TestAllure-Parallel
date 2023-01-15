@@ -4,20 +4,13 @@
     <parameter name="browser" value="chrome"/>
     <test  name="Test " parallel="methods" thread-count="2">
         <classes>
-            <class name="trello.TrelloTest">
+            <class name="sites.trello.TrelloTest">
                 <methods>
                     <include name="logginTrello"/>
                     <include name="сheckingIfTheCreateButtonIsDisplayed"/>
                     <include name="checkSearchFieldIsEnabled"/>
                     <include name="checkBoardName"/>
-                    <include name="logginTrello1"/>
-                    <include name="сheckingIfTheCreateButtonIsDisplayed1"/>
-                    <include name="checkSearchFieldIsEnabled1"/>
-                    <include name="checkBoardName1"/>
-                    <include name="logginTrello2"/>
-                    <include name="сheckingIfTheCreateButtonIsDisplayed2"/>
-                    <include name="checkSearchFieldIsEnabled2"/>
-                    <include name="checkBoardName2"/>
+
                 </methods>
             </class>
         </classes>

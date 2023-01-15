@@ -1,10 +1,11 @@
-package epicenterPage;
+package pages.epicenterPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import pages.BasePage;
 
-public class MobilPhonePage extends BasePage{
+public class MobilPhonePage extends BasePage {
     @FindBy(xpath = "//button[@data-card-params='5948322, ,1']")
     public WebElement buyButton;
     @FindBy(xpath = "//p[@class='summation-block__results'] ")

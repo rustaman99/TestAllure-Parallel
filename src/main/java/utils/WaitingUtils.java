@@ -1,5 +1,5 @@
 package utils;
-import epicenterPage.BasePage;
+import pages.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +15,7 @@ public class WaitingUtils extends BasePage {
         super(driver);
     }
 
-    public WebElement waitElementToBeClickable(WebElement element) {
+    public WebElement waitElementToBeClickablee(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
         return element;
     }
@@ -25,7 +25,7 @@ public class WaitingUtils extends BasePage {
         return element;
     }
 
-    public WebElement wait5Seconds(WebElement element) throws InterruptedException {
+    public WebElement waitElementToBeClickable(WebElement element) throws InterruptedException {
         Thread.sleep(5000);
         return element;
     }
