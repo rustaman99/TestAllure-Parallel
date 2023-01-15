@@ -17,7 +17,8 @@ public class DriverManager {
             ChromeOptions chromeOptions = new ChromeOptions();
             // chromeOptions.setCapability("browserVersion", "108");
             chromeOptions.setCapability("platformName", "Windows");
-        setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions));
+       // setDriver(new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions));
+            setDriver(new RemoteWebDriver(new URL("http://192.168.0.107:4444"), chromeOptions));
         } else if (browser.equalsIgnoreCase("Chrome")) {
             WebDriverManager.chromedriver().setup();
             setDriver(new ChromeDriver());
