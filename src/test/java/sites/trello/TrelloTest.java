@@ -51,7 +51,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().startPageTrello.buttonCreated.click();
         pages.get().startPageTrello.boardTitle.sendKeys("New board");
         pages.get().startPageTrello.createBoardSubmitButton.click();
-        Assert.assertEquals(pages.get().workspacePage.boardName.getText(), "New board");
+        Assert.assertEquals(pages.get().workspacePage.boardName.getText(), "New boar");
         pages.get().workspacePage.newBoardButton.click();
         pages.get().workspacePage.actionMenuForBoards.click();
         pages.get().workspacePage.closeTheBoard.click();
