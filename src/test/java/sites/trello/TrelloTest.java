@@ -7,6 +7,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static utils.AllureListener.saveScreenshotPNG;
 import static utils.DriverManager.getDriver;
 
 public class TrelloTest  extends BaseTest {
@@ -51,11 +52,12 @@ public class TrelloTest  extends BaseTest {
         pages.get().startPageTrello.buttonCreated.click();
         pages.get().startPageTrello.boardTitle.sendKeys("New board");
         pages.get().startPageTrello.createBoardSubmitButton.click();
-        Assert.assertEquals(pages.get().workspacePage.boardName.getText(), "New boar");
+        Assert.assertEquals(pages.get().workspacePage.boardName.getText(), "New board");
         pages.get().workspacePage.newBoardButton.click();
         pages.get().workspacePage.actionMenuForBoards.click();
         pages.get().workspacePage.closeTheBoard.click();
         pages.get().workspacePage.boardСlosingСonfirmation.click();
+
 
     }
 
@@ -103,6 +105,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().workspacePage.addCard.click();
         pages.get().listElementsOfWorkspacePage.listOfHeadTable.get(1).click();
         Assert.assertTrue(pages.get().listElementsOfWorkspacePage.listOfHeadTable.get(1).isDisplayed());
+        saveScreenshotPNG(getDriver());
     }
 
     @Test
@@ -125,7 +128,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().waitingUtils.waitElementToBeClickable(pages.get().listElementsOfWorkspacePage.labelColorsList.get(0)).click();
     }
     @Test
-    public void  checkTheAdditionOfTheDeadlineForCompletingTheTaskInTheCard() throws InterruptedException {
+    public void  checkTheAdditionOfTheDeadlineForCompletingTheTaskInTheCard()  {
 //        getDriver().get("https://trello.com");
 //        pages.get().loginPage.buttonLogin.click();
 //        pages.get().loginPage.userEmailForm.sendKeys("nazarenko.ruslan@ukr.net");

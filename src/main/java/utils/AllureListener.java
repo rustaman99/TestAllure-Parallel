@@ -17,25 +17,19 @@ public class AllureListener extends BasePage implements ITestListener {
         super(driver);
     }
 
-    // Text attachments for Allure
     @Attachment(value = "{0}", type = "text/plain")
     public static String saveTextLog(String message) {
         return message;
     }
 
-    // Text attachments for Allure
     @Attachment(value = "Page screenshot", type = "image/png")
     public static byte[] saveScreenshotPNG(WebDriver driver) {
-        return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+       return ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
     }
-
     @Override
     public void onTestFailure(ITestResult Result) {
         saveScreenshotPNG(getDriver());
         saveTextLog(Result.getMethod().getConstructorOrMethod().getName() + "Screenshot Saved.");
     }
-
-
-
 
 }
