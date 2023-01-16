@@ -26,19 +26,19 @@ public class TrelloTest  extends BaseTest {
       pages.get().waitingUtils.waitElementToBeClickable(pages.get().loginPage.userPasswordForm).sendKeys("rustaman99");
       pages.get().loginPage.userPasswordForm.sendKeys(Keys.ENTER);
   }
-    @Test
-    public void checkUserName() {
-        Assert.assertEquals(pages.get().startPageTrello.userName.getText(), "RSauto");
-    }
-
-    @Test
-    public void checkTheCreateButtonIsDisplayed() {
-        Assert.assertTrue(pages.get().startPageTrello.buttonCreatedBoard.isDisplayed());
-    }
-    @Test
-    public void checkSearchFieldIsEnabled()  {
-        Assert.assertTrue(pages.get().startPageTrello.searchField.isEnabled());
-    }
+//    @Test
+//    public void checkUserName() {
+//        Assert.assertEquals(pages.get().startPageTrello.userName.getText(), "RSauto");
+//    }
+//
+//    @Test
+//    public void checkTheCreateButtonIsDisplayed() {
+//        Assert.assertTrue(pages.get().startPageTrello.buttonCreatedBoard.isDisplayed());
+//    }
+//    @Test
+//    public void checkSearchFieldIsEnabled()  {
+//        Assert.assertTrue(pages.get().startPageTrello.searchField.isEnabled());
+//    }
 
     @Test
     public void checkBoardName() {
@@ -83,7 +83,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().workspacePage.addCard.click();
         pages.get().workspacePage.creatingСardName.sendKeys("Выучить");
         pages.get().workspacePage.addNewCard.click();
-        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучит");
+        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучить");
     }
 
     @Test

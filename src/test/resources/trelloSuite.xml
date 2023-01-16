@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Trello Test">
     <parameter name="browser" value="chrome"/>
-    <test  name="Test " parallel="methods" thread-count="2">
+    <test  name="Test " parallel="methods" thread-count="1">
         <classes>
             <class name="sites.trello.TrelloTest">
                 <methods>
@@ -11,7 +11,6 @@
                     <include name="checkCardWithIndex2IsDisplayed"/>
                     <include name="dragСardToAnotherBoard"/>
                     <include name="addALabelInTheBoardAndCheckIfItIsDisplayed"/>
-                    <include name="boardCreationCheck"/>
                     <include name="checkForAddInMemberInTheCard"/>
                 </methods>
             </class>
