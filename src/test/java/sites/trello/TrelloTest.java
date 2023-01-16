@@ -36,18 +36,18 @@ public class TrelloTest  extends BaseTest {
         Assert.assertTrue(pages.get().startPageTrello.buttonCreatedBoard.isDisplayed());
     }
     @Test
-    public void checkSearchFieldIsEnabled() throws InterruptedException {
+    public void checkSearchFieldIsEnabled()  {
         Assert.assertTrue(pages.get().startPageTrello.searchField.isEnabled());
     }
 
     @Test
-    public void checkBoardName() throws InterruptedException {
+    public void checkBoardName() {
         pages.get().startPageTrello.JavaButton.click();
         Assert.assertEquals(pages.get().workspacePage.boardName.getText(), "Java");
     }
 
     @Test
-    public void boardCreationCheck() throws InterruptedException {
+    public void boardCreationCheck() {
         pages.get().startPageTrello.buttonCreatedBoard.click();
         pages.get().startPageTrello.buttonCreated.click();
         pages.get().startPageTrello.boardTitle.sendKeys("New board");
@@ -77,7 +77,7 @@ public class TrelloTest  extends BaseTest {
     }
 
     @Test
-    public void checkCreatingANewCard() throws InterruptedException {
+    public void checkCreatingANewCard()  {
 
         pages.get().startPageTrello.boardName.click();
         pages.get().workspacePage.addCard.click();
@@ -87,7 +87,7 @@ public class TrelloTest  extends BaseTest {
     }
 
     @Test
-    public void checkForAddInMemberInTheCard() throws InterruptedException {
+    public void checkForAddInMemberInTheCard()  {
         pages.get().startPageTrello.boardName.click();
         pages.get().workspacePage.cardNew.click();
         pages.get().workspacePage.members.click();
@@ -99,7 +99,7 @@ public class TrelloTest  extends BaseTest {
     }
 
     @Test
-    public void checkCardWithIndex2IsDisplayed() throws InterruptedException {
+    public void checkCardWithIndex2IsDisplayed() {
 
         pages.get().startPageTrello.boardName.click();
         pages.get().workspacePage.addCard.click();
@@ -109,7 +109,7 @@ public class TrelloTest  extends BaseTest {
     }
 
     @Test
-    public void dragСardToAnotherBoard() throws InterruptedException {
+    public void dragСardToAnotherBoard()  {
         Actions actions = new Actions(getDriver());
         pages.get().startPageTrello.boardName.click();
         pages.get().workspacePage.addCard.click();
