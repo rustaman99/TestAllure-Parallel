@@ -26,11 +26,12 @@ hs_err_pid*
 /build/
 *.iml
 
-
+.DS_Store
 target/
 .allure
 .idea
 build/
+find . -name .DS_Store -print0 | xargs -0 git rm --ignore-unmatch
 
 #gradle
 .gradle
