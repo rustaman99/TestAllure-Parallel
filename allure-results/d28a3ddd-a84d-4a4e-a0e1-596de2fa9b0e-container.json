@@ -1,1 +1,0 @@
-{"uuid":"d28a3ddd-a84d-4a4e-a0e1-596de2fa9b0e","name":"epicenter.BaseTest.before","children":["7d509694-89ab-447f-bf5e-54e26f677d49"],"description":"","befores":[{"name":"before","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1673262020597,"stop":1673262020597}],"afters":[],"start":1673262020596,"stop":1673262020597}
