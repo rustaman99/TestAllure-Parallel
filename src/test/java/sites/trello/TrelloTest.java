@@ -34,7 +34,6 @@ public class TrelloTest  extends BaseTest {
     public void checkTheCreateButtonIsDisplayed() {
         Assert.assertTrue(pages.get().startPageTrello.buttonCreatedBoard.isDisplayed());
     }
-
     @Test
     public void checkSearchFieldIsEnabled() throws InterruptedException {
         Assert.assertTrue(pages.get().startPageTrello.searchField.isEnabled());
@@ -82,7 +81,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().workspacePage.addCard.click();
         pages.get().workspacePage.creatingСardName.sendKeys("Выучить");
         pages.get().workspacePage.addNewCard.click();
-        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучить");
+        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучит");
     }
 
     @Test
