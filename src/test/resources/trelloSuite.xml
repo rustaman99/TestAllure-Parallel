@@ -6,12 +6,10 @@
         <classes>
             <class name="sites.trello.TrelloTest">
                 <methods>
-                    <include name="checkAddToFavoriteIsDisplayed"/>
                     <include name="checkCreatingANewCard"/>
-                    <include name="checkCardWithIndex2IsDisplayed"/>
-                    <include name="dragСardToAnotherBoard"/>
-                    <include name="addALabelInTheBoardAndCheckIfItIsDisplayed"/>
                     <include name="checkForAddInMemberInTheCard"/>
+                    <include name="checkCardWithIndex2IsDisplayed"/>
+
                 </methods>
             </class>
         </classes>

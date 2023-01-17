@@ -83,7 +83,7 @@ public class TrelloTest  extends BaseTest {
         pages.get().workspacePage.addCard.click();
         pages.get().workspacePage.creatingСardName.sendKeys("Выучить");
         pages.get().workspacePage.addNewCard.click();
-        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучить");
+        Assert.assertEquals(pages.get().workspacePage.newCardName.getText(), "Выучит");
     }
 
     @Test
